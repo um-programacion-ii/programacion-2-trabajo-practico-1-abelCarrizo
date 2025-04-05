@@ -42,4 +42,11 @@ public class Vehiculo {
     public void setCapacidadCargaKg(double capacidad){
         this.capacidadCargaKg = capacidad;
     }
+
+    public void mostrarInformacion(){
+        System.out.println("Marca: " + marca);
+        System.out.println("Patente: " + patente);
+        System.out.println("Anio: " + anio);
+        System.out.println("Capacidad Kg: " + capacidadCargaKg);
+    }
 }
