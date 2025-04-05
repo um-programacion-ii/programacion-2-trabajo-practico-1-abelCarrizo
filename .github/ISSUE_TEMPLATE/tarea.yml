@@ -53,7 +53,8 @@ body:
       label: Checklist de finalización
       description: Marcá los puntos que se deben cumplir para dar la tarea como terminada
       options:
-        - label: La tarea está implementada correctamente
-        - label: Se probó la funcionalidad en `Main` o test correspondiente
-        - label: Se creó una rama específica para esta tarea
-        - label: Se abrió un Pull Request que menciona este Issue
+        - label: La clase compila sin errores
+        - label: Se incluyen todos los atributos requeridos
+        - label: Se implementan todos los métods necesarios
+        - label: Se incluyen las validaciones especificadas
+        - label: Se agrega documentación JavaDoc
