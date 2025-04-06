@@ -13,8 +13,8 @@ public class Camion extends Vehiculo{
      * @param capacidadCargaKg  la capacidad de carga en kg
      * @param tieneAcoplado     indica si el camión tiene acoplado
      */
-    public Camion(String patente, String marca, int anio, double capacidadCargaKg, boolean tieneAcoplado) {
-        super(patente, marca, anio, capacidadCargaKg);
+    public Camion(String marca, String patente, int anio, double capacidadCargaKg, boolean tieneAcoplado) {
+        super(marca, patente, anio, capacidadCargaKg);
         this.tieneAcoplado = tieneAcoplado;
     }
 
@@ -28,6 +28,6 @@ public class Camion extends Vehiculo{
 
     @Override
     public String informacion() {
-        return super.informacion() + "\nTiene acoplado: " + this.tieneAcoplado;
+        return super.informacion() + "\nTiene acoplado: " + (tieneAcoplado ? "Si" : "No");
     }
 }

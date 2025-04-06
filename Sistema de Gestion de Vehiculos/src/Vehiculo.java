@@ -60,10 +60,10 @@ public class Vehiculo {
     }
 
     public String informacion() {
-        return "Patente: " + patente +
-                "\nMarca: " + marca +
-                "\nAño: " + anio +
-                "\nCapacidad de carga (kg): " + capacidadCargaKg;
+        return "Marca: " + this.marca +
+                "\nPatente: " + this.patente +
+                "\nAño: " + this.anio +
+                "\nCapacidad de carga (kg): " + this.capacidadCargaKg;
     }
 
 }
