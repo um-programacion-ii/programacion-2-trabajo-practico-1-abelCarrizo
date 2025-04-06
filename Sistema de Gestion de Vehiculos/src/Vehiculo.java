@@ -1,9 +1,25 @@
+/**
+ * Representa un vehículo genérico de una empresa.
+ * Contiene información básica como patente, marca, año y capacidad de carga.
+ * <p>
+ * Esta clase forma parte del sistema de gestión de vehículos.
+ *
+ * @author Abel Carrizo
+ */
 public class Vehiculo {
     private String marca;
     private String patente;
     private int anio;
     private double capacidadCargaKg;
 
+    /**
+     * Crea un nuevo objeto Vehículo con los valores proporcionados.
+     *
+     * @param patente           la patente del vehículo
+     * @param marca             la marca del vehículo
+     * @param anio              el año del vehículo
+     * @param capacidadCargaKg  la capacidad de carga en kilogramos
+     */
     public Vehiculo(String marca, String patente, int anio, double capacidadCargaKg) {
         this.marca = marca;
         this.patente = patente;
@@ -41,12 +57,5 @@ public class Vehiculo {
 
     public void setCapacidadCargaKg(double capacidad){
         this.capacidadCargaKg = capacidad;
-    }
-
-    public void mostrarInformacion(){
-        System.out.println("Marca: " + marca);
-        System.out.println("Patente: " + patente);
-        System.out.println("Anio: " + anio);
-        System.out.println("Capacidad Kg: " + capacidadCargaKg);
     }
 }
