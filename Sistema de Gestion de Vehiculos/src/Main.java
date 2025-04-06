@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        Vehiculo ford = new Vehiculo("Ford Bronco", "abcdef", 2025, 2349);
-        Vehiculo fiat = new Vehiculo("Fiat Cronos", "ghijklm", 2024, 1136);
-        Vehiculo jeep = new Vehiculo("Jeep Renegade", "nopqrs", 2024, 1500);
+        Camion ford = new Camion("Ford Bronco", "abcdef", 2025, 2349, true);
+        Camion fiat = new Camion("Fiat Cronos", "ghijklm", 2024, 1136, false);
+        Camion jeep = new Camion("Jeep Renegade", "nopqrs", 2024, 1500, true);
 
         VehiculoPrinter info = new VehiculoPrinter();
         info.mostrarInformacion(ford);
