@@ -1,5 +1,5 @@
 /**
- * Representa un vehículo genérico de una empresa.
+ * Representa un vehículo genérico.
  * Contiene información básica como patente, marca, año y capacidad de carga.
  * <p>
  * Esta clase forma parte del sistema de gestión de vehículos.
@@ -58,4 +58,12 @@ public class Vehiculo {
     public void setCapacidadCargaKg(double capacidad){
         this.capacidadCargaKg = capacidad;
     }
+
+    public String informacion() {
+        return "Patente: " + patente +
+                "\nMarca: " + marca +
+                "\nAño: " + anio +
+                "\nCapacidad de carga (kg): " + capacidadCargaKg;
+    }
+
 }
