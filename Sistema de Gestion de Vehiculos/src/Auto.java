@@ -12,6 +12,7 @@ public class Auto extends Vehiculo {
      * @param anio              Año de fabricación.
      * @param capacidadCargaKg  Capacidad de carga en kilogramos.
      * @param cantidadPasajeros Cantidad de pasajeros que puede transportar.
+     * @throws IllegalArgumentException si la cantidad de pasajeros es inválida.
      */
     public Auto(String marca, String patente, int anio, double capacidadCargaKg, int cantidadPasajeros) {
         super(marca, patente, anio, capacidadCargaKg);
@@ -23,6 +24,9 @@ public class Auto extends Vehiculo {
     }
 
     public void setCantidadPasajeros(int cantidadPasajeros) {
+        if (cantidadPasajeros <= 0) {
+            throw new IllegalArgumentException("La cantidad de pasajeros debe ser mayor a cero.");
+        }
         this.cantidadPasajeros = cantidadPasajeros;
     }
 

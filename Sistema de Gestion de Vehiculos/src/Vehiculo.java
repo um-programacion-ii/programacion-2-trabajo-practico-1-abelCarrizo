@@ -1,3 +1,5 @@
+import java.time.Year;
+
 /**
  * Representa un vehículo genérico.
  * Contiene información básica como patente, marca, año y capacidad de carga.
@@ -19,6 +21,7 @@ public class Vehiculo {
      * @param marca             la marca del vehículo
      * @param anio              el año del vehículo
      * @param capacidadCargaKg  la capacidad de carga en kilogramos
+     * @throws IllegalArgumentException si alguno de los datos es inválido
      */
     public Vehiculo(String marca, String patente, int anio, double capacidadCargaKg) {
         this.marca = marca;
@@ -32,6 +35,9 @@ public class Vehiculo {
     }
 
     public void setMarca(String marca){
+        if (marca == null || marca.trim().isEmpty()) {
+            throw new IllegalArgumentException("La marca no puede estar vacía.");
+        }
         this.marca = marca;
     }
 
@@ -40,6 +46,9 @@ public class Vehiculo {
     }
 
     public void setPatente(String patente){
+        if (patente == null || patente.trim().isEmpty()) {
+            throw new IllegalArgumentException("La patente no puede estar vacía.");
+        }
         this.patente = patente;
     }
 
@@ -48,6 +57,10 @@ public class Vehiculo {
     }
 
     public void setAnio(int anio){
+        int anioActual = Year.now().getValue();
+        if (anio < 1900 || anio > anioActual) {
+            throw new IllegalArgumentException("El año debe estar entre 1900 y " + anioActual + ".");
+        }
         this.anio = anio;
     }
 
@@ -56,6 +69,9 @@ public class Vehiculo {
     }
 
     public void setCapacidadCargaKg(double capacidad){
+        if (capacidad < 0) {
+            throw new IllegalArgumentException("La capacidad de carga no puede ser negativa.");
+        }
         this.capacidadCargaKg = capacidad;
     }
 
@@ -65,5 +81,4 @@ public class Vehiculo {
                 "\nAño: " + this.anio +
                 "\nCapacidad de carga (kg): " + this.capacidadCargaKg;
     }
-
 }
